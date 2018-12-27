@@ -61,7 +61,18 @@ export const LayoutRoutes: Routes = [
   { path: 'maps',           component: MapsComponent },
   { path: 'notifications',  component: NotificationsComponent },
   { path: 'upgrade',        component: UpgradeComponent },
+  { path: 'maintenence',    
+    children: [
+      { path: '', loadChildren: '../feature/maintenence/maintenence.module#MaintenenceModule' }
+      ]
+  },
+  { path: 'registration',    
+    children: [
+      { path: '', loadChildren: '../feature/registration/registration.module#RegistrationModule' }
+      ]
+  },
 ];
+
 
 
 @NgModule({
