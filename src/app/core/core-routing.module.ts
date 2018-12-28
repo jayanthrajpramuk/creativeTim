@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,6 +10,8 @@ import { IconsComponent } from '../feature/icons/icons.component';
 import { MapsComponent } from '../feature/maps/maps.component';
 import { NotificationsComponent } from '../feature/notifications/notifications.component';
 import { UpgradeComponent } from '../feature/upgrade/upgrade.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SettingsComponent } from './settings/settings.component';
 
 export const LayoutRoutes: Routes = [
   // {
@@ -61,6 +64,9 @@ export const LayoutRoutes: Routes = [
   { path: 'maps',           component: MapsComponent },
   { path: 'notifications',  component: NotificationsComponent },
   { path: 'upgrade',        component: UpgradeComponent },
+  { path: 'login',          component: LoginComponent },
+  { path: 'profile',        component: ProfileComponent },
+  { path: 'settings',       component: SettingsComponent },
   { path: 'maintenence',    
     children: [
       { path: '', loadChildren: '../feature/maintenence/maintenence.module#MaintenenceModule' }

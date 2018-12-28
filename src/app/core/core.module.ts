@@ -25,6 +25,9 @@ import {
   MatTooltipModule,
   MatSelectModule
 } from '@angular/material';
+import { ProfileComponent } from './profile/profile.component';
+import { SettingsComponent } from './settings/settings.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -52,6 +55,9 @@ import {
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    ProfileComponent,
+    SettingsComponent,
+    LoginComponent,
   ],
   exports: [
     FooterComponent,

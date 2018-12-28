@@ -1,0 +1,24 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 ml-auto mr-auto">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Maintenence Module</h4>
+                      <!-- <p class="card-category">P</p> -->
+                  </div>
+                  <div class="card-body">
+
+                    <div>
+                        <a [routerLink]="['/maintenence/operations/testlist']"> List of Tests</a>
+                        
+                    </div>
+                     
+                     <a [routerLink]="['/maintenence/operations/testedit']"> Edit</a>
+                     <router-outlet></router-outlet>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
