@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -56,6 +57,7 @@ export const LayoutRoutes: Routes = [
   //         component: UpgradeComponent
   //     }]
   // }
+  { path: 'home',      component: HomeComponent },
   { path: 'dashboard',      component: DashboardComponent },
   { path: 'user-profile',   component: UserProfileComponent },
   { path: 'table-list',     component: TableListComponent },

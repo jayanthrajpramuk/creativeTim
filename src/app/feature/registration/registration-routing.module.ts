@@ -1,14 +1,14 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { RegistrationPatientListComponent } from './registration-patient-list/registration-patient-list.component';
+import { RegistrationHomeComponent } from './registration-home/registration-home.component';
 
 const routes: Routes = [{
-  path:'',
+  path:'operations',
+  component:RegistrationHomeComponent,
   children: [
-    {
-      path:'', redirectTo:'form', pathMatch:'full'
-    },
     {
       path:'form', component:RegistrationFormComponent
     },

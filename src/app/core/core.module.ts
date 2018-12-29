@@ -28,6 +28,9 @@ import {
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LoginComponent } from './login/login.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { MenuService } from './breadcrumb/menu.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [
@@ -58,11 +61,16 @@ import { LoginComponent } from './login/login.component';
     ProfileComponent,
     SettingsComponent,
     LoginComponent,
+    BreadcrumbComponent,
+    HomeComponent,
   ],
   exports: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent
+  ],
+  providers:[
+    MenuService
   ]
 })
 export class CoreModule { }
