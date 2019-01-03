@@ -57,15 +57,17 @@ export const LayoutRoutes: Routes = [
   //         component: UpgradeComponent
   //     }]
   // }
-  { path: 'home',      component: HomeComponent },
-  { path: 'dashboard',      component: DashboardComponent },
+
+ /* { path: 'dashboard',      component: DashboardComponent },
   { path: 'user-profile',   component: UserProfileComponent },
   { path: 'table-list',     component: TableListComponent },
   { path: 'typography',     component: TypographyComponent },
   { path: 'icons',          component: IconsComponent },
   { path: 'maps',           component: MapsComponent },
+  { path: 'upgrade',        component: UpgradeComponent },*/
+
+  { path: 'home',      component: HomeComponent },
   { path: 'notifications',  component: NotificationsComponent },
-  { path: 'upgrade',        component: UpgradeComponent },
   { path: 'login',          component: LoginComponent },
   { path: 'profile',        component: ProfileComponent },
   { path: 'settings',       component: SettingsComponent },
@@ -79,6 +81,29 @@ export const LayoutRoutes: Routes = [
       { path: '', loadChildren: '../feature/registration/registration.module#RegistrationModule' }
       ]
   },
+  { path: 'appointment',
+    children: [
+      { path: '', loadChildren: '../feature/appointment/appointment.module#AppointmentModule' }
+    ]
+  },
+  { path: 'bill',
+  children: [
+    { path: '', loadChildren: '../feature/bill/bill.module#BillModule' }
+  ]
+},
+
+{ path: 'observation',
+children: [
+  { path: '', loadChildren: '../feature/observation/observation.module#ObservationModule' }
+]
+},
+
+{ path: 'reports',
+children: [
+  { path: '', loadChildren: '../feature/reports/reports.module#ReportsModule' }
+]
+},
+
 ];
 
 
