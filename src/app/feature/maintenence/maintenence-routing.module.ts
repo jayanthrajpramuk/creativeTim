@@ -7,9 +7,8 @@ import { MaintenenceHomeComponent } from './maintenence-home/maintenence-home.co
 const routes: Routes = [
 
   {
-    path: 'operations',
-    component: MaintenenceHomeComponent,
-    children: [
+    path: '',
+       children: [
       {
         path: 'testlist', component: MedicalTestListComponent
       },

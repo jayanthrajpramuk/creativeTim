@@ -6,9 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'operations',
-    component: AppointmentHomeComponent,
-    children: [
+      path: '',
+      children: [
       {
         path: 'appointmentlist', component: AppointmentListComponent
       },

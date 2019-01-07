@@ -6,8 +6,8 @@ import { ReportsHomeComponent } from './reports-home/reports-home.component';
 
 const routes: Routes = [
   {
-    path: 'operations',
-    component: ReportsHomeComponent,
+    path: '',
+   
     children: [
       {
         path: 'forecast', component: ForecastReportComponent

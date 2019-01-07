@@ -6,8 +6,7 @@ import { RegistrationPatientListComponent } from './registration-patient-list/re
 import { RegistrationHomeComponent } from './registration-home/registration-home.component';
 
 const routes: Routes = [{
-  path:'operations',
-  component:RegistrationHomeComponent,
+  path:'',
   children: [
     {
       path:'form', component:RegistrationFormComponent

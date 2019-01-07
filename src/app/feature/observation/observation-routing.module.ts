@@ -6,9 +6,8 @@ import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
   {
-    path: 'operations',
-    component: ObservationHomeComponent,
-    children: [
+    path: '',
+       children: [
       {
         path: 'addobservation', component: DiagnoseComponent
       },

@@ -7,8 +7,7 @@ import { PrintBillComponent } from './print-bill/print-bill.component';
 const routes: Routes = [
 
   {
-    path: 'operations',
-    component: BillHomeComponent,
+    path: '',
     children: [
       {
         path: 'generatebill', component: GenerateBillComponent
