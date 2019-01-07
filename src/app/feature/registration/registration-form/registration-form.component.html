@@ -1,3 +1,165 @@
-<p>
-  registration-form works!
-</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="First name" formControlName="firstName">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Last Name" formControlName="lastName">
+        </mat-form-field>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Date of Birth" formControlName="dateOfBirth">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-select placeholder="Gender" name="sex" formControlName="sex">
+            <mat-option *ngFor="let item of sex" [value]="item.value">
+              {{item.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-select placeholder="Matrial Status" name="martialStatus" formControlName="martialStatus">
+            <mat-option *ngFor="let item of yesNo" [value]="item.value">
+              {{item.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-select placeholder="Insured" name="insured" formControlName="insured">
+            <mat-option *ngFor="let item of yesNo" [value]="item.value">
+              {{item.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </td>
+    </tr>
+  </table>
+
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="Address 1" formControlName="address1">
+        </mat-form-field>
+
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="Address 2" formControlName="address2">
+        </mat-form-field>
+
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="Address 3" formControlName="address3">
+        </mat-form-field>
+
+      </td>
+
+    </tr>
+  </table>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="Email-ID" formControlName="emailId">
+        </mat-form-field>
+
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="Contact Number" formControlName="contactNumber"> 
+        </mat-form-field>
+
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="Alternate Number" formControlName="alternateNumber">
+        </mat-form-field>
+
+      </td>
+
+    </tr>
+  </table>
+  <br>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="To Meet Doctor" formControlName="toMeetDoctor">
+        </mat-form-field>
+
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="Refered Doctor" formControlName="referedDoctor">
+        </mat-form-field>
+
+      </td>
+
+
+    </tr>
+  </table>
+
+
+
+
+  <!-- <div formGroupName="personalData" novalidate>
+    <input formControlName="firstName">
+    <input formControlName="lastName">
+    <input formControlName="email">
+    <input formControlName="mobile">
+    
+    <select formControlName="country">
+      <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+    </select>
+  </div>
+
+  <div formGroupName="addressData" novalidate>
+      <input formControlName="address1">
+      <input formControlName="address2">
+  </div>
+
+  <div formGroupName="doctorData" novalidate>
+      <input formControlName="toMeetDoctor">
+      <input formControlName="referenceDoctor">
+  </div>
+ -->
+
+  <br><br><br>
+
+
+  <div layout="row" layout-align="center center">
+    <button mat-raised-button type="submit">Save</button>
+    <button mat-raised-button type="reset" (click)="reset()">Reset</button>
+  </div>
+
+
+
+</form>

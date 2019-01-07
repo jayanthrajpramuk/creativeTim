@@ -1,4 +1,5 @@
 import { FeatureModule } from './feature.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('FeatureModule', () => {
   let featureModule: FeatureModule;
