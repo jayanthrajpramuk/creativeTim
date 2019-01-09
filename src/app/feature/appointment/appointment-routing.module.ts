@@ -1,4 +1,3 @@
-import { AppointmentHomeComponent } from './appointment-home/appointment-home.component';
 import { BookAppointmentComponent } from './book-appointment/book-appointment.component';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 import { NgModule } from '@angular/core';

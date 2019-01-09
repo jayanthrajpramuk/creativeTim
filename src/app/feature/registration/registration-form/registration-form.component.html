@@ -1,20 +1,20 @@
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
 
-  <table class="example-full-width" cellspacing="0">
-    <tr>
-      <td>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="First name" formControlName="firstName">
-        </mat-form-field>
-      </td>
-      <td>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Last Name" formControlName="lastName">
-        </mat-form-field>
-      </td>
-      <td></td>
-    </tr>
-  </table>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm">
+          <input type="text" id="firstName" class="form-control" 
+          placeholder="First name" formControlName="firstName">
+          </div>
+     <div class="col-sm">
+        <input  type="text" id="lastName" class="form-control" 
+        placeholder="Last Name" formControlName="lastName">
+     </div>
+    
+    </div>
+        
+    
+  </div>
 
   <table class="example-full-width" cellspacing="0">
     <tr>
@@ -124,6 +124,9 @@
       </td>
 
 
+    </tr>
+    <tr>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
     </tr>
   </table>
 
